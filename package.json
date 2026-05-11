@@ -1,10 +1,23 @@
-"devDependencies": {
-  "@types/node": "latest",
-  "@types/react": "latest",
-  "@types/react-dom": "latest",
-  "autoprefixer": "latest",
-  "postcss": "latest",
-  "tailwindcss": "latest",
-  "@tailwindcss/postcss": "latest",
-  "typescript": "latest"
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
 }
