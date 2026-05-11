@@ -5,21 +5,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "@next/third-parties": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "lucide-react": "latest"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
