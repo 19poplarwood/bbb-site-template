@@ -1,134 +1,146 @@
 export default function Home() {
-  const photos = [
-    "/photo1.jpg",
-    "/photo2.jpg",
-    "/photo3.jpg",
-    "/photo4.jpg",
-    "/photo5.jpg",
-    "/photo6.jpg",
-  ]
-
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      {/* HERO */}
-      <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-sky-700">
-            Villas, New Jersey
-          </p>
-
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl">
-            Bayside Bungalow
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            A cozy pet-friendly beach bungalow near Cape May with a swim spa,
-            outdoor shower, relaxing lounge spaces, and unforgettable sunsets.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#photos"
-              className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-            >
-              View Photos
-            </a>
-
-            <a
-              href="mailto:youremail@example.com"
-              className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-            >
-              Contact Us
-            </a>
+    <main className="min-h-screen bg-[#f8f5ef] text-slate-900">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-900 text-sm font-bold text-white">
+            BB
           </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-bold">Relax by the Bay</h2>
-
-            <p className="mt-6 leading-8 text-slate-700">
-              Welcome to Bayside Bungalow — a relaxing coastal retreat located
-              near the Delaware Bay and minutes from Cape May and Wildwood.
-            </p>
-
-            <p className="mt-4 leading-8 text-slate-700">
-              Enjoy beautiful sunsets, nearby beaches, local restaurants, and a
-              thoughtfully designed home stocked with amenities for couples,
-              families, and pet lovers.
-            </p>
+            <p className="font-semibold">Bayside Bungalow</p>
+            <p className="text-sm text-slate-600">Villas, New Jersey</p>
           </div>
+        </div>
 
-          <div className="rounded-3xl bg-slate-100 p-8">
-            <h3 className="text-xl font-semibold">Amenities</h3>
+        <a
+          href="mailto:youremail@example.com"
+          className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-700"
+        >
+          Contact
+        </a>
+      </header>
 
-            <ul className="mt-6 space-y-3 text-slate-700">
-              <li>✓ Swim Spa</li>
-              <li>✓ Pet Friendly</li>
-              <li>✓ Outdoor Shower</li>
-              <li>✓ Fully Equipped Kitchen</li>
-              <li>✓ Beach Gear Included</li>
-              <li>✓ Fast WiFi</li>
-              <li>✓ Smart TV</li>
-              <li>✓ Outdoor Dining Area</li>
-            </ul>
+      <section className="mx-auto max-w-6xl px-6 py-20 text-center">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-sky-800">
+          Pet-Friendly Coastal Retreat
+        </p>
+
+        <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl">
+          Relax by the bay at Bayside Bungalow
+        </h1>
+
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+          A cozy beach bungalow near Cape May with a swim spa, outdoor shower,
+          comfortable gathering spaces, and everything you need for a relaxing
+          Jersey Shore getaway.
+        </p>
+
+        <div className="mt-10 flex justify-center gap-4">
+          <a
+            href="#details"
+            className="rounded-full bg-sky-900 px-6 py-3 text-sm font-semibold text-white hover:bg-sky-800"
+          >
+            View Details
+          </a>
+          <a
+            href="#photos"
+            className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold hover:bg-slate-50"
+          >
+            Photos Coming Soon
+          </a>
+        </div>
+      </section>
+
+      <section id="details" className="mx-auto max-w-6xl px-6 py-12">
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            ["Swim Spa", "Unwind after beach days with a relaxing swim spa experience."],
+            ["Pet Friendly", "Bring your pup and enjoy a comfortable fenced outdoor space."],
+            ["Near Cape May", "Close to beaches, sunsets, restaurants, wineries, and shore attractions."],
+          ].map(([title, text]) => (
+            <div key={title} className="rounded-3xl bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-bold">{title}</h3>
+              <p className="mt-4 leading-7 text-slate-700">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-[2rem] bg-white p-8 shadow-sm md:p-12">
+          <h2 className="text-3xl font-bold">Welcome to your bayside escape</h2>
+
+          <p className="mt-6 max-w-3xl leading-8 text-slate-700">
+            Bayside Bungalow is designed for easy, comfortable vacations. Spend
+            your mornings by the water, afternoons exploring Cape May County, and
+            evenings relaxing outside after sunset.
+          </p>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="font-semibold">Inside the bungalow</h3>
+              <ul className="mt-4 space-y-3 text-slate-700">
+                <li>✓ Comfortable living space</li>
+                <li>✓ Fully equipped kitchen</li>
+                <li>✓ Fast WiFi</li>
+                <li>✓ Smart TV</li>
+                <li>✓ Family-friendly essentials</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">Outside & nearby</h3>
+              <ul className="mt-4 space-y-3 text-slate-700">
+                <li>✓ Swim spa</li>
+                <li>✓ Outdoor shower</li>
+                <li>✓ Outdoor dining space</li>
+                <li>✓ Bay sunsets nearby</li>
+                <li>✓ Short drive to Cape May</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* PHOTO GALLERY */}
-      <section
-        id="photos"
-        className="bg-slate-50 py-20"
-      >
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mb-10">
-            <h2 className="text-3xl font-bold">Photo Gallery</h2>
+      <section id="photos" className="bg-sky-950 px-6 py-20 text-white">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold">Photos coming soon</h2>
+          <p className="mt-4 max-w-2xl leading-8 text-sky-100">
+            This section is ready for your property photos. Add images later to
+            the public folder and replace these placeholders with a gallery.
+          </p>
 
-            <p className="mt-3 text-slate-700">
-              A look inside the bungalow and around the property.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {photos.map((photo, index) => (
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
               <div
-                key={index}
-                className="overflow-hidden rounded-3xl bg-white shadow-sm"
+                key={item}
+                className="flex h-56 items-center justify-center rounded-3xl border border-white/20 bg-white/10 text-sm text-sky-100"
               >
-                <img
-                  src={photo}
-                  alt={`Property photo ${index + 1}`}
-                  className="h-72 w-full object-cover"
-                />
+                Photo {item} Placeholder
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* LOCATION */}
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-3xl bg-slate-900 px-8 py-14 text-white">
-          <h2 className="text-3xl font-bold">
-            Minutes from Cape May
-          </h2>
-
-          <p className="mt-6 max-w-2xl leading-8 text-slate-300">
-            Conveniently located near beaches, wineries, restaurants, shopping,
-            fishing, and local attractions throughout Cape May County.
+        <div className="rounded-[2rem] bg-white p-8 text-center shadow-sm md:p-12">
+          <h2 className="text-3xl font-bold">Ready to plan your stay?</h2>
+          <p className="mx-auto mt-4 max-w-xl leading-8 text-slate-700">
+            Reach out for availability, pricing, and details about the bungalow.
           </p>
+
+          <a
+            href="mailto:youremail@example.com"
+            className="mt-8 inline-block rounded-full bg-slate-900 px-8 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+          >
+            Contact Us
+          </a>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-slate-200 py-10">
-        <div className="mx-auto max-w-6xl px-6 text-sm text-slate-500">
-          © 2026 Bayside Bungalow. All rights reserved.
-        </div>
+      <footer className="border-t border-slate-200 px-6 py-8 text-center text-sm text-slate-500">
+        © 2026 Bayside Bungalow. Villas, New Jersey.
       </footer>
     </main>
   )
